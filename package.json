@@ -1,4 +1,5 @@
 {
+  "description": "Jelly corporate website",
   "scripts": {
     "dev": "next",
     "build": "next build",
