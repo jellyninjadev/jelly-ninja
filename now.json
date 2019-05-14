@@ -1,0 +1,8 @@
+{
+    "version": 2,
+    "name": "Jelly Inc",
+    "builds": [
+        { "src": "package.json", "use": "@now/next" }
+    ],
+    "alias": "jelly.ninja"
+}
