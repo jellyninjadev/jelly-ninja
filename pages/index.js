@@ -1,74 +1,135 @@
+import {
+  Heading,
+  Button,
+  Form,
+  FormField,
+  TextInput,
+  TextArea,
+  Box,
+  Image,
+  Stack,
+  Paragraph,
+  Grid,
+  Carousel
+} from 'grommet'
+import Head from 'next/head'
+
 export default () => (
-  <main>
-    <h1>Developing mobile and web apps from scratch to launch</h1>
-    <button>get a quoute within a day</button>
-    <h2>Here is how we are doing that</h2>
-    <h3>First meeting</h3>
-    <p>
-      Let us hear the problem that you are trying to fix and we'll go through it
-      together to prepare the end goal, strategy and plan.
-    </p>
-    <h3>Research and prototyping</h3>
-    <p>
-      We going to refine the idea down to value proposition, then come up with
-      hypothesis that verify viability with help of quantitative and qualitative
-      study.
-    </p>
-    <h3>Production</h3>
-    <p>
-      Canonical software development by battle tested methodologies and
-      engineering paradigms.
-    </p>
-    <h3>Rinse and repeat</h3>
-    <p>
-      We support all the way through first sales to in house team assembly and
-      hand over process.
-    </p>
-    <h2>Case study</h2>
-    <h3>Ajaib</h3>
-    <p>
-      Indonesian investment banking app build with Django for database api and
-      back office, react native framework.
-    </p>
-    <h3>Ready to meet</h3>
-    <p>Dating app build with expo and fire base for backend.</p>
-    <h3>Reiki academy</h3>
-    <p>
-      Online conference scheduling featuring robust scheduling mechanism, 1 to 1
-      calls via webrtc protocol. Build with react for front end and nodejs,
-      mongodb for backend.
-    </p>
-    <h3>Moshimoshi</h3>
-    <p>A fun wat to remembering Japanese words</p>
-    <h3>RedQ</h3>
-    <p>
-      Real estate data aggregation and analyzing solution build with Spart,
-      python , mysql and react for frontend. Elastic on-demand scalability to
-      handle throughput automatically on aws servers.
-    </p>
-    <h3>Ambulnz</h3>
-    <p>TODO</p>
-    <h3>Flip.Chat</h3>
-    <p>
-      Secure and fast mobile messenger build with cocos2d cross platform
-      framework as client and php phalcon framework.
-    </p>
-    <h3>Yol</h3>
-    <p>
-      Social network app for Azerbaijan car owners build with php laravel
-      framework and with android and swift client.
-    </p>
-    <h2>Tell us about your idea</h2>
-    <form>
-      <input type="text" name="name" placeholder="name" />
-      <input type="email" name="email" placeholder="email" />
-      <input type="phone" name="phone" placeholder="phone" />
-      <input type="number" name="rough_budget" placeholder="rough budget" />
-      <textarea
-        name="description"
-        placeholder="i want to make more sales by..."
+  <>
+    <Head>
+      <img
+        src="/static/artboard.png"
+        style={{
+          position: 'absolute',
+          height: '100vh',
+          right: 0
+        }}
       />
-      <input type="submit" value="Send" />
-    </form>
-  </main>
-);
+      <title>Jelly Ninja</title>
+      <link
+        href="https://fonts.googleapis.com/css?family=Amatic+SC|Roboto&display=swap"
+        rel="stylesheet"
+      />
+    </Head>
+    <main
+      style={{
+        padding: 0
+      }}
+    >
+      <Box align="center" animation="fadeIn" justify="center" height="large">
+        <Heading level={1} alignSelf="center">
+          Developing mobile and web apps from scratch to launch
+        </Heading>
+        <Button primary label="get a quoute within a day" />
+      </Box>
+      <Box>
+        <img src="/static/logo.png" alt="logo" width="48" height="48" />
+      </Box>
+
+      <Box pad="xlarge">
+        <Heading level={2}>Here is how we are doing that</Heading>
+        <Heading level={3}>First meeting</Heading>
+        <Paragraph>
+          Let us hear the problem that you are trying to fix and we'll go
+          through it together to prepare the end goal, strategy and plan.
+        </Paragraph>
+        <Heading level={3} alignSelf="end">
+          Research and prototyping
+        </Heading>
+        <Paragraph alignSelf="end">
+          We going to refine the idea down to value proposition, then come up
+          with hypothesis that verify viability with help of quantitative and
+          qualitative study.
+        </Paragraph>
+        <Heading level={3}>Production</Heading>
+        <Paragraph>
+          Canonical software development by battle tested methodologies and
+          engineering paradigms.
+        </Paragraph>
+        <Heading level={3} alignSelf="end">
+          Rinse and repeat
+        </Heading>
+        <Paragraph alignSelf="end">
+          We support all the way through first sales to in house team assembly
+          and hand over process.
+        </Paragraph>
+      </Box>
+      <Box>
+        <Heading level={2} pad="xlarge">
+          Our work
+        </Heading>
+        <Box>
+          <Box align="center" height="600px">
+            <Heading level={3}>Ajaib</Heading>
+            <Paragraph>
+              Indonesian investment banking app build with Django for database
+              api and back office, react native framework.
+            </Paragraph>
+            <Image src="/static/ajaib00.png" />
+          </Box>
+          <Box align="center" height="600px">
+            <Heading level={3}>Ready to meet</Heading>
+            <Paragraph>
+              Dating app build with expo and fire base for backend.
+            </Paragraph>
+            <Image src="/static/readytomeet00.png" />
+          </Box>
+          <Box align="center" height="600px">
+            <Heading level={3}>Restbook</Heading>
+            <Paragraph>
+              Restaurant table reservation app. Third place hackathone winner.
+            </Paragraph>
+            <Image src="/static/restbook00.png" />
+          </Box>
+          <Box align="center" height="600px">
+            <Heading level={3}>Flip.Chat</Heading>
+            <Paragraph>
+              Secure and fast mobile messenger build with cocos2d cross platform
+              framework as client and php phalcon framework.
+            </Paragraph>
+            <Image src="/static/flipchat00.png" />
+          </Box>
+          <Box align="center" height="600px">
+            <Heading level={3}>Yol</Heading>
+            <Paragraph>
+              Social network app for Azerbaijan car owners build with php
+              laravel framework and with android and swift client.
+            </Paragraph>
+            <Image src="/static/yol00.png" />
+          </Box>
+        </Box>
+      </Box>
+      <Box>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSf9fkEr3P4qESTr9Sh0LM3V_YlDtDdayTGEhEuEKlIoxLgQdA/viewform?embedded=true"
+          height="903"
+          frameBorder="0"
+          marginHeight="0"
+          marginWidth="0"
+        >
+          Loading...
+        </iframe>
+      </Box>
+    </main>
+  </>
+)
