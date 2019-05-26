@@ -17,14 +17,6 @@ import Head from 'next/head'
 export default () => (
   <>
     <Head>
-      <img
-        src="/static/artboard.png"
-        style={{
-          position: 'absolute',
-          height: '100vh',
-          right: 0
-        }}
-      />
       <title>Jelly Ninja</title>
       <link
         href="https://fonts.googleapis.com/css?family=Amatic+SC|Roboto&display=swap"
@@ -36,6 +28,24 @@ export default () => (
         padding: 0
       }}
     >
+      <img
+        src="/static/phone.png"
+        style={{
+          position: 'absolute',
+          right: 125,
+          bottom: -250,
+          width: 250,
+          zIndex: -1
+        }}
+      />
+      <img
+        src="/static/artboard.png"
+        style={{
+          position: 'absolute',
+          height: '100vh',
+          right: 0
+        }}
+      />
       <Box align="center" animation="fadeIn" justify="center" height="large">
         <Heading level={1} alignSelf="center">
           Developing mobile and web apps from scratch to launch
@@ -43,10 +53,10 @@ export default () => (
         <Button primary label="get a quoute within a day" />
       </Box>
       <Box>
-        <img src="/static/logo.png" alt="logo" width="48" height="48" />
+        <img src="/static/logo.png" width="48" height="48" />
       </Box>
 
-      <Box pad="xlarge">
+      <Box pad="xlarge" style={{ zIndex: 1, background: 'white' }}>
         <Heading level={2}>Here is how we are doing that</Heading>
         <Heading level={3}>First meeting</Heading>
         <Paragraph>
@@ -74,12 +84,10 @@ export default () => (
           and hand over process.
         </Paragraph>
       </Box>
-      <Box>
-        <Heading level={2} pad="xlarge">
-          Our work
-        </Heading>
+      <Box pad="xlarge">
+        <Heading level={2}>Our work</Heading>
         <Box>
-          <Box align="center" height="600px">
+          <Box align="center">
             <Heading level={3}>Ajaib</Heading>
             <Paragraph>
               Indonesian investment banking app build with Django for database
@@ -87,21 +95,21 @@ export default () => (
             </Paragraph>
             <Image src="/static/ajaib00.png" />
           </Box>
-          <Box align="center" height="600px">
+          <Box align="center">
             <Heading level={3}>Ready to meet</Heading>
             <Paragraph>
               Dating app build with expo and fire base for backend.
             </Paragraph>
             <Image src="/static/readytomeet00.png" />
           </Box>
-          <Box align="center" height="600px">
+          <Box align="center">
             <Heading level={3}>Restbook</Heading>
             <Paragraph>
               Restaurant table reservation app. Third place hackathone winner.
             </Paragraph>
             <Image src="/static/restbook00.png" />
           </Box>
-          <Box align="center" height="600px">
+          <Box align="center">
             <Heading level={3}>Flip.Chat</Heading>
             <Paragraph>
               Secure and fast mobile messenger build with cocos2d cross platform
@@ -109,7 +117,7 @@ export default () => (
             </Paragraph>
             <Image src="/static/flipchat00.png" />
           </Box>
-          <Box align="center" height="600px">
+          <Box align="center">
             <Heading level={3}>Yol</Heading>
             <Paragraph>
               Social network app for Azerbaijan car owners build with php
