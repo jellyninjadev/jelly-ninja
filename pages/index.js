@@ -10,7 +10,8 @@ import {
   Stack,
   Paragraph,
   Grid,
-  Carousel
+  Carousel,
+  ResponsiveContext
 } from 'grommet'
 import Head from 'next/head'
 
@@ -28,29 +29,54 @@ export default () => (
         padding: 0
       }}
     >
-      <img
-        src="/static/phone.png"
-        style={{
-          position: 'absolute',
-          right: 125,
-          bottom: -250,
-          width: 250,
-          zIndex: -1
-        }}
-      />
-      <img
-        src="/static/artboard.png"
-        style={{
-          position: 'absolute',
-          height: '100vh',
-          right: 0
-        }}
-      />
       <Box align="center" animation="fadeIn" justify="center" height="large">
-        <Heading level={1} alignSelf="center">
+        <Heading
+          level={1}
+          alignSelf="center"
+          style={{ backgroundColor: 'white' }}
+        >
           Developing mobile and web apps from scratch to launch
         </Heading>
         <Button primary label="get a quoute within a day" />
+        <img
+          src="/static/artboard.png"
+          style={{
+            position: 'absolute',
+            right: 0,
+            left: 0,
+            top: 0,
+            bottom: 0
+          }}
+        />
+        <ResponsiveContext.Consumer>
+          {size => {
+            if (size === 'small')
+              return (
+                <img
+                  src="/static/phone.png"
+                  style={{
+                    position: 'absolute',
+                    width: 250,
+                    textAlign: 'center',
+                    zIndex: -1
+                  }}
+                />
+              )
+
+            return (
+              <img
+                src="/static/phone.png"
+                style={{
+                  position: 'absolute',
+                  right: 125,
+                  bottom: -250,
+                  width: 250,
+                  zIndex: -1
+                }}
+              />
+            )
+          }}
+        </ResponsiveContext.Consumer>
       </Box>
       <Box>
         <img src="/static/logo.png" width="48" height="48" />

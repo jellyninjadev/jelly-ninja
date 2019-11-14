@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-XXXXXXXX-X');
+        gtag('config', 'UA-123048303-2');
       `
     }
   }
@@ -37,7 +37,7 @@ export default class MyDocument extends Document {
             <Fragment>
               <script
                 async
-                src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXX-X"
+                src="https://www.googletagmanager.com/gtag/js?id=UA-123048303-2"
               />
               {/* We call the function above to inject the contents of the script tag */}
               <script dangerouslySetInnerHTML={this.setGoogleTags()} />
