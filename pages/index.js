@@ -43,6 +43,9 @@ export default () => {
           <Button
             primary
             label="get a quoute within a day"
+            style={{
+              zIndex: 1
+            }}
             onClick={() => {
               console.log('clicked')
               window.scrollTo(0, formRef.current.offsetTop)
