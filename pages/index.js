@@ -161,6 +161,19 @@ export default () => {
               </Paragraph>
               <Image src="/static/yol00.png" />
             </Box>
+            <Box align="center">
+              <iframe
+                ref={formRef}
+                src="https://docs.google.com/forms/d/e/1FAIpQLSf9fkEr3P4qESTr9Sh0LM3V_YlDtDdayTGEhEuEKlIoxLgQdA/viewform?embedded=true"
+                width="700"
+                height="900"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+              >
+                Loading…
+              </iframe>
+            </Box>
           </Box>
         </Box>
         <Box />
