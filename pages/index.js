@@ -20,7 +20,6 @@ import styled from 'styled-components'
 const Container = styled.div`
   max-width: 960px;
   margin: 0 auto;
-  margin-top: 100px;
 `
 
 export default () => {
@@ -102,7 +101,10 @@ export default () => {
           <img src="/static/logo.png" width="48" height="48" />
         </Box>
         <Container>
-          <Box pad="xlarge" style={{ zIndex: 1, background: 'white' }}>
+          <Box
+            pad="xlarge"
+            style={{ zIndex: 1, background: 'white', marginTop: 100 }}
+          >
             <Heading level={2}>Here is how we are doing that</Heading>
             <Heading level={3}>First meeting</Heading>
             <Paragraph>
