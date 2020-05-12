@@ -167,18 +167,20 @@ export default () => {
           </Box>
         </Box>
         <Box />
-        <iframe
-          style={{
-            height: 900,
-            maxWidth: 700,
-            width: '100%',
-            overflow: 'hidden'
-          }}
-          src="https://docs.google.com/forms/d/e/1FAIpQLSf9fkEr3P4qESTr9Sh0LM3V_YlDtDdayTGEhEuEKlIoxLgQdA/viewform?embedded=true"
-          frameBorder="0"
-        >
-          Loading…
-        </iframe>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <iframe
+            style={{
+              height: 900,
+              maxWidth: 700,
+              width: '100%',
+              overflow: 'hidden'
+            }}
+            src="https://docs.google.com/forms/d/e/1FAIpQLSf9fkEr3P4qESTr9Sh0LM3V_YlDtDdayTGEhEuEKlIoxLgQdA/viewform?embedded=true"
+            frameBorder="0"
+          >
+            Loading…
+          </iframe>
+        </div>
       </main>
     </>
   )
